@@ -1,0 +1,61 @@
+[
+ {
+  "shortname": "Counter",
+  "longname": "Counter",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"contracts/counter.py\" 5)) \nstorage (record (\"contracts/counter.py\" 5) (stored_value (literal (intOrNat 0) (\"contracts/counter.py\" 5))))\nstorage_type (())\nmessages ((decrement True None None True (\"contracts/counter.py\" 12) ((set (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (sub (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (attr (params (\"contracts/counter.py\" 12)) \"value\" (\"contracts/counter.py\" 13)) (\"contracts/counter.py\" 13)) (\"contracts/counter.py\" 13)))) (increment True None None True (\"contracts/counter.py\" 8) ((set (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (add (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (attr (params (\"contracts/counter.py\" 8)) \"value\" (\"contracts/counter.py\" 9)) (\"contracts/counter.py\" 9)) (\"contracts/counter.py\" 9)))))\nflags ()\nglobals ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"contracts/counter.py\" 5))",
+    "line_no": "(\"contracts/counter.py\" 20)",
+    "show": true
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"contracts/counter.py\" 5)) (\"contracts/counter.py\" 20)) \"stored_value\" (\"contracts/counter.py\" 22)) (literal (intOrNat 0) (\"contracts/counter.py\" 22)) (\"contracts/counter.py\" 22))",
+    "line_no": "(\"contracts/counter.py\" 22)"
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"contracts/counter.py\" 5))",
+    "line_no": "(\"contracts/counter.py\" 24)",
+    "message": "increment",
+    "params": "(record (\"contracts/counter.py\" 24) (value (literal (intOrNat 1) (\"contracts/counter.py\" 24))))"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"contracts/counter.py\" 5)) (\"contracts/counter.py\" 24)) \"stored_value\" (\"contracts/counter.py\" 25)) (literal (intOrNat 1) (\"contracts/counter.py\" 25)) (\"contracts/counter.py\" 25))",
+    "line_no": "(\"contracts/counter.py\" 25)"
+   },
+   {
+    "action": "message",
+    "id": "(static_id 0 (\"contracts/counter.py\" 5))",
+    "line_no": "(\"contracts/counter.py\" 28)",
+    "message": "decrement",
+    "params": "(record (\"contracts/counter.py\" 28) (value (literal (intOrNat 1) (\"contracts/counter.py\" 28))))"
+   },
+   {
+    "action": "verify",
+    "condition": "(eq (attr (contract_data (static_id 0 (\"contracts/counter.py\" 5)) (\"contracts/counter.py\" 28)) \"stored_value\" (\"contracts/counter.py\" 29)) (literal (intOrNat 0) (\"contracts/counter.py\" 29)) (\"contracts/counter.py\" 29))",
+    "line_no": "(\"contracts/counter.py\" 29)"
+   }
+  ],
+  "kind": "test"
+ },
+ {
+  "shortname": "counter",
+  "longname": "counter",
+  "scenario": [
+   {
+    "action": "newContract",
+    "accept_unknown_types": false,
+    "export": "(template_id (static_id 0 (\"contracts/counter.py\" 5)) \nstorage (record (\"contracts/counter.py\" 5) (stored_value (literal (intOrNat 0) (\"contracts/counter.py\" 5))))\nstorage_type (())\nmessages ((decrement True None None True (\"contracts/counter.py\" 12) ((set (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (sub (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (attr (params (\"contracts/counter.py\" 12)) \"value\" (\"contracts/counter.py\" 13)) (\"contracts/counter.py\" 13)) (\"contracts/counter.py\" 13)))) (increment True None None True (\"contracts/counter.py\" 8) ((set (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (add (attr (data) \"stored_value\" (\"contracts/counter.py\" 13)) (attr (params (\"contracts/counter.py\" 8)) \"value\" (\"contracts/counter.py\" 9)) (\"contracts/counter.py\" 9)) (\"contracts/counter.py\" 9)))))\nflags ()\nglobals ()\nviews ()\nentry_points_layout ()\ninitial_metadata ()\nbalance ())",
+    "id": "(static_id 0 (\"contracts/counter.py\" 5))",
+    "line_no": "(\"\" -1)",
+    "show": true
+   }
+  ],
+  "kind": "compilation"
+ }
+]

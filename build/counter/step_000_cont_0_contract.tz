@@ -1,0 +1,20 @@
+parameter (or (int %decrement) (int %increment));
+storage   int;
+code
+  {
+    UNPAIR;     # @parameter : @storage
+    IF_LEFT
+      {
+        SWAP;       # @storage : @parameter%decrement
+        # == decrement ==
+        # self.data.stored_value -= params.value # @storage : @parameter%decrement
+        SUB;        # int
+      }
+      {
+        # == increment ==
+        # self.data.stored_value += params.value # @parameter%increment : @storage
+        ADD;        # int
+      }; # int
+    NIL operation; # list operation : int
+    PAIR;       # pair (list operation) int
+  };

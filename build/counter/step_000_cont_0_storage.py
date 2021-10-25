@@ -1,0 +1,1 @@
+sp.record(stored_value = 0)
