@@ -1,0 +1,11 @@
+Creating contract KT1TezoooozzSmartPyzzSTATiCzzzwwBFA1
+ -> (Pair (Pair (Pair "tz1g6QGhMSB89TswxYwPsZgAMUoikWAXQEtW" 0) (Pair {} {Elt "" 0x68747470733a2f2f6578616d706c652e636f6d})) (Pair (Pair {} False) (Pair {} {})))
+ => ./build/FA2_comp/step_000_cont_0_storage.tz 1
+ => ./build/FA2_comp/step_000_cont_0_storage.json 13
+ => ./build/FA2_comp/step_000_cont_0_sizes.csv 2
+ => ./build/FA2_comp/step_000_cont_0_storage.py 1
+ => ./build/FA2_comp/step_000_cont_0_types.py 7
+ => ./build/FA2_comp/step_000_cont_0_metadata.metadata_base.json 183
+ => ./build/FA2_comp/step_000_cont_0_contract.tz 773
+ => ./build/FA2_comp/step_000_cont_0_contract.json 1033
+ => ./build/FA2_comp/step_000_cont_0_contract.py 83

@@ -663,3 +663,30 @@ class FA2(FA2_change_metadata, FA2_token_metadata, FA2_mint, FA2_administrator, 
         }
         self.init_metadata("metadata_base", metadata_base)
         FA2_core.__init__(self, config, metadata, paused = False, administrator = admin)
+
+        ## ## Standard “main”
+##
+## This specific main uses the relative new feature of non-default tests
+## for the browser version.
+# if "templates" not in __name__:
+#     add_test(environment_config())
+#     if not global_parameter("only_environment_test", False):
+#         add_test(FA2_config(debug_mode = True), is_default = not sp.in_browser)
+#         add_test(FA2_config(single_asset = True), is_default = not sp.in_browser)
+#         add_test(FA2_config(non_fungible = True, add_mutez_transfer = True),
+#                  is_default = not sp.in_browser)
+#         add_test(FA2_config(readable = False), is_default = not sp.in_browser)
+#         add_test(FA2_config(force_layouts = False),
+#                  is_default = not sp.in_browser)
+#         add_test(FA2_config(debug_mode = True, support_operator = False),
+#                  is_default = not sp.in_browser)
+#         add_test(FA2_config(assume_consecutive_token_ids = False)
+#                  , is_default = not sp.in_browser)
+#         add_test(FA2_config(store_total_supply = True)
+#                  , is_default = not sp.in_browser)
+#         add_test(FA2_config(add_mutez_transfer = True)
+#                  , is_default = not sp.in_browser)
+#         add_test(FA2_config(lazy_entry_points = True)
+#                  , is_default = not sp.in_browser)
+
+sp.add_compilation_target("FA2_comp", FA2(config=FA2_config(debug_mode=False), admin = sp.address("tz1g6QGhMSB89TswxYwPsZgAMUoikWAXQEtW"),metadata = sp.utils.metadata_of_url("https://example.com")))
